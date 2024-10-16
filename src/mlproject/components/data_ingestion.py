@@ -25,7 +25,7 @@ class DataIngestion:
 
             # Read the CSV file and store it in a DataFrame
 
-            df=pd.read_csv(os.path.join('data','raw.csv'))
+            df=pd.read_csv(os.path.join('dataset','raw.csv'))
             logging.info("Reading completed mysql database")
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
